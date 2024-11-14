@@ -38,7 +38,7 @@ Print the bit in this position. */
   int turn_off = (num_with_0_add >> position2) & 0;
   num_with_0_add = num2 ^ (turn_off << position2);
   printf("Number with bit %d set to 1: %d\n", position2, num_with_1_add);
-  printf("Number wuth bit %d set to 0: %d", position2, num_with_0_add);
+  printf("Number with bit %d set to 0: %d", position2, num_with_0_add);
 
   // Toggle bit
   printf("\nToggle bit:\n");
