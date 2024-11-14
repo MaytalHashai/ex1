@@ -10,15 +10,16 @@ Assignment:
 int main() {
   
   // What bit
-  int num, position;
-  printf("Enter a number: ");
-  scanf("%d", &num);
-  printf("Enter a position ");
-  scanf("%d", &position);
-  printf("The bit in position %d of number %d is:", position, num, );
-  printf("What bit:\n");
   /*Scan two integers (representing number and a position)
-  Print the bit in this position. */
+Print the bit in this position. */
+  int num1, position1;
+  printf("Enter a number: ");
+  scanf("%d", &num1);
+  printf("Enter a position ");
+  scanf("%d", &position1);
+  int res = (num1 >> position1) & 1;
+  printf("The bit in position %d of number %d is: %d\n", num1, position1, res);
+  // printf("What bit:\n"); @@
   
   // Set bit
   printf("\nSet bit:\n");
@@ -27,6 +28,12 @@ int main() {
   Print the output
   Now make sure it's "off" (equal to 0)
   Print the output */
+  int num2, position2;
+  printf("Please enter a number: ");
+  scanf("%d", &num2);
+  printf("Please enter a position: ");
+  scanf("%d", &position2);
+  int turn_on1 =
 
   // Toggle bit
   printf("\nToggle bit:\n");
