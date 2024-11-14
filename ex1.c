@@ -12,14 +12,14 @@ int main() {
   // What bit
   /*Scan two integers (representing number and a position)
 Print the bit in this position. */
-  // int num1, position1;
-  // printf("Enter a number: ");
-  // scanf("%d", &num1);
-  // printf("Enter a position ");
-  // scanf("%d", &position1);
-  // int res = (num1 >> position1) & 1;
-  // printf("The bit in position %d of number %d is: %d\n", num1, position1, res);
-  // // printf("What bit:\n"); @@
+  int num1, position1;
+  printf("Enter a number: ");
+  scanf("%d", &num1);
+  printf("Enter a position ");
+  scanf("%d", &position1);
+  int res = (num1 >> position1) & 1;
+  printf("The bit in position %d of number %d is: %d\n", num1, position1, res);
+  // printf("What bit:\n"); @@
 
   // Set bit
   printf("\nSet bit:\n");
