@@ -10,6 +10,12 @@ Assignment:
 int main() {
   
   // What bit
+  int num, position;
+  printf("Enter a number: ");
+  scanf("%d", &num);
+  printf("Enter a position ");
+  scanf("%d", &position);
+  printf("The bit in position %d of number %d is:", position, num, );
   printf("What bit:\n");
   /*Scan two integers (representing number and a position)
   Print the bit in this position. */
