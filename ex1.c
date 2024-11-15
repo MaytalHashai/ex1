@@ -35,8 +35,8 @@ Print the bit in this position. */
   scanf("%d", &position2);
   int bitOn = ((num2 >> position2) | 1) << position2; // this line changes the bit 1 to o for example for 17 position 3: 00011000
   bitOn = num2 | bitOn; // add the changed bit to num 2 for example for 17 position 3 : 00011001
-  int bitOff = ((num2 >> position2) & 0) << position2; //@@
-  bitOff = num2 ^ bitOff; //@@
+  int bitOff = ~((~(num2 >> position2))| 1) << position2;
+  bitOff = num2 & bitOff; //@@
   printf("Number with bit %d set to 1: %d\n", position2, bitOn); // prints the new number with the bit that was changed
   printf("Number with bit %d set to 0: %d", position2, bitOff);
 
