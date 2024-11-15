@@ -28,23 +28,33 @@ Print the bit in this position. */
   Print the output
   Now make sure it's "off" (equal to 0)
   Print the output */
-  int num2, position2, num_with_1_add, num_with_0_add;
+  int num2, position2;
   printf("Please enter a number: ");
-  scanf("%d", &num2, &num_with_1_add, &num_with_0_add);
+  scanf("%d", &num2);
   printf("Please enter a position: ");
   scanf("%d", &position2);
-  int turn_on1 = ((num_with_1_add >> position2) & 1) | 1;
-  num_with_1_add = num2 | (turn_on1 << position2);
-  int turn_off = (num_with_0_add >> position2) & 0;
-  num_with_0_add = num2 ^ (turn_off << position2);
-  printf("Number with bit %d set to 1: %d\n", position2, num_with_1_add);
-  printf("Number with bit %d set to 0: %d", position2, num_with_0_add);
+  int bitOn = ((num2 >> position2) | 1) << position2; // this line changes the bit 1 to o for example for 17 position 3: 00011000
+  bitOn = num2 | bitOn; // add the changed bit to num 2 for example for 17 position 3 : 00011001
+  int bitOff = ((num2 >> position2) & 0) << position2; //@@
+  bitOff = num2 ^ bitOff; //@@
+  printf("Number with bit %d set to 1: %d\n", position2, bitOn); // prints the new number with the bit that was changed
+  printf("Number with bit %d set to 0: %d", position2, bitOff);
+
 
   // Toggle bit
   printf("\nToggle bit:\n");
   /*Scan two integers (representing number and a position)
   Toggle the bit in this position
   Print the new number */
+  int num3, position3;
+  printf("Please enter a number: ");
+  scanf("%d", &num3);
+  printf("Please enter a number: ");
+  scanf("%d", &position3);
+  int onToOff = ((num3 >> position3) | 1) << position3;
+  onToOff = num3 | onToOff;
+  printf("Number with bit %d toggled: %d", position3, onToOff);
+
   
   // Even - Odd
   printf("\nEven - Odd:\n");
